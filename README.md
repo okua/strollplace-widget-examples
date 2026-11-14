@@ -4,7 +4,8 @@ A static educational demonstration of StrollPlace's public place-card widgets,
 using Albuquerque, New Mexico and three published neighborhoods: Nob Hill,
 Old Town, and Downtown.
 
-Live site: https://okua.github.io/strollplace-widget-examples/
+Live sites: https://strollplace.netlify.app/ and
+https://okua.github.io/strollplace-widget-examples/
 
 ## Included examples
 
@@ -14,6 +15,7 @@ Live site: https://okua.github.io/strollplace-widget-examples/
 - An illustrative article footer using a dark city card.
 - Copyable embed snippets and links to the public widget builder.
 - Links to StrollPlace, StrollPlace HQ, and StrollPlace Pro.
+- A printable open house sign with directional arrows and SVG downloads.
 
 The property layout does not offer a real property. The guide supplies research
 prompts, not neighborhood ratings or market estimates. This site adds no

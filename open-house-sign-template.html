@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Printable Open House Sign Template (SVG) | StrollPlace</title>
+  <meta name="description" content="Make a printable open house sign with a left or right arrow. Add optional hours and an address, then print on US Letter or download the editable SVG.">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .sign-page { max-width: 960px; margin: auto; padding: 2rem 1rem; }
+    .sign-page h1 { margin: 1rem 0; font-size: clamp(2rem, 5vw, 3.5rem); }
+    .sign-options { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0; }
+    .sign-options label { flex: 1 1 12rem; }
+    .sign-options input, .sign-options select {
+      display: block; width: 100%; margin-top: .4rem; padding: .65rem;
+      border: 1px solid #767676; border-radius: .35rem; background: white; color: #171717;
+      font: inherit;
+    }
+    .sign-preview { margin: 1.5rem 0; border: 1px solid #767676; background: white; }
+    .sign-preview svg { display: block; width: 100%; height: auto; }
+    .sign-actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .sign-actions button { font: inherit; cursor: pointer; }
+    .sign-notes { margin: 2rem 0; }
+    @page { size: letter landscape; margin: .35in; }
+    @media print {
+      html, body { background: white; }
+      .sign-page { max-width: none; padding: 0; }
+      .sign-page > :not(.sign-preview) { display: none !important; }
+      .sign-preview { display: block !important; margin: 0; border: 0; }
+      .sign-preview svg { width: 9.9in; max-width: 100%; }
+    }
+  </style>
+  <script src="./open-house-sign.js" defer></script>
+</head>
+<body>
+  <main class="sign-page">
+    <nav aria-label="Back to demo"><a href="./">← StrollPlace widget examples</a></nav>
+    <h1>Free printable open house sign</h1>
+    <p>Choose an arrow direction, add your hours or address, and print a sign for the day. The SVG download is editable in a vector editor.</p>
+    <div class="sign-options">
+      <label for="sign-direction">Arrow direction
+        <select id="sign-direction">
+          <option value="right">Right</option>
+          <option value="left">Left</option>
+          <option value="none">No arrow</option>
+        </select>
+      </label>
+      <label for="sign-hours">Hours (optional)
+        <input id="sign-hours" maxlength="36" placeholder="Saturday, 1–3 PM">
+      </label>
+      <label for="sign-address">Address (optional)
+        <input id="sign-address" maxlength="52" placeholder="123 Example Street">
+      </label>
+    </div>
+    <figure class="sign-preview">
+      <svg xmlns="http://www.w3.org/2000/svg" id="sign" width="1100" height="850" viewBox="0 0 1100 850" role="img" aria-labelledby="sign-title">
+        <title id="sign-title">Open house sign with right arrow</title>
+        <rect width="1100" height="850" fill="white"/>
+        <rect x="25" y="25" width="1050" height="800" rx="16" fill="none" stroke="#171717" stroke-width="18"/>
+        <g fill="#171717" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">
+          <text x="550" y="290" font-size="151" font-weight="bold">OPEN HOUSE</text>
+          <text id="preview-hours" x="550" y="390" font-size="56" font-weight="bold"></text>
+          <text id="preview-address" x="550" y="465" font-size="44"></text>
+        </g>
+        <path id="sign-arrow" fill="#171717" d="M250 575H690V510L850 620 690 730V665H250Z"/>
+      </svg>
+    </figure>
+    <div class="sign-actions">
+      <button class="button primary" type="button" id="download-sign">Download SVG</button>
+      <button class="button" type="button" id="print-sign">Print sign</button>
+    </div>
+    <noscript><p>Enable JavaScript to customize or download the sign. You can print the default sign from your browser menu.</p></noscript>
+    <section class="sign-notes" aria-labelledby="print-tips">
+      <h2 id="print-tips">Printing tips</h2>
+      <p>Use US Letter paper in landscape orientation. Turn off browser headers and footers for a clean page. Print one copy first and check that the arrow points the right way from where visitors will see it.</p>
+      <p>Explore neighborhood guides on <a href="https://strollplace.com/">StrollPlace</a> or see <a href="https://pro.strollplace.com/">StrollPlace Pro</a> for local professionals.</p>
+    </section>
+  </main>
+</body>
+</html>
